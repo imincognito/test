@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IBRAIN</title>
+</head>
+<body onload="tempMessage();">
+    <div id="terminal">
+        <div class="ibrain logo2" style="text-align: center;">
+            <h1><span class="blue">IBR</span><span class="pink">AIN</span>V-6</h1>
+        </div>
+        <div class="textController">
+            <div onclick="tempMessage()" id="output"></div>
+            <div onclick="" id="input-line">
+                <div id="prompt">
+                    <br>
+                    <span id="userIP">Fetching...</span>
+                    <div class="writingBox">
+                        <div class="write stopatbottom" style="display: none;">
+                            write
+                        </div>
+<input value="Type below your command" type="button" style="background-color: black; color: #0f0; border: none;"/>
+                        <div placeholder="Type here" type="text" id="cmd" contenteditable="true"> </div>
+              
+              
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var textController = document.querySelector('.textController');
+
+            function scrollIntoView() {
+                textController.scrollTop = textController.scrollHeight;
+            }
+
+            var observer = new MutationObserver(scrollIntoView);
+            var observerConfig = {
+                childList: true, subtree: true
+            };
+
+            observer.observe(textController, observerConfig);
+            scrollIntoView();
+        });
+
+        var cmd1Element = document.getElementById('cmd');
+        var writeElement = document.querySelector('.write');
+
+        cmd1Element.addEventListener('input', function(event) {
+            // Get the text content
+            var textContent = cmd1Element.innerText.trim();
+
+            // Update the writing status
+            if (textContent !== '') {
+                writeElement.style.display = '';
+                //**   writeElement.innerHTML = 'Writing...';
+
+                // Display character, word, and sentence counts
+                var charCount = textContent.length;
+                var wordCount = textContent.split(/\s+/).filter(function(word) {
+                    return word.length > 0;
+                }).length;
+                var sentenceCount = textContent.split(/[.!?]+/).filter(function(sentence) {
+                    return sentence.length > 0;
+                }).length;
+
+                // writeElement.innerHTML += '<br>Char: ' + charCount + ' | Words: ' + wordCount + ' | Sen: ' + sentenceCount;
+
+                cmd1Element.style.width = '100%';
+            } else {
+                // Reset display when there is no text
+                writeElement.style.display = '';
+                cmd1Element.style.width = '100%';
+                cmd1Element.style.transition = '0.5s';
+                // writeElement.innerHTML = 'write';
+            }
+        });
+
+       
+
+        
+        
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="ip.js"></script>
+</body>
+</html>

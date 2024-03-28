@@ -1,0 +1,112 @@
+body {
+    background-color: #333;
+    font-family: Monospace;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+#terminal, #terminal2 {
+    border-radius: 0px;
+    padding: 5px;
+    margin: 0;
+    max-width: 101%;
+    background-color: #000;
+    color: #fff;
+    background: ;
+    background-size: 100%;
+    
+}
+.ibrain {
+    background-color: #000;
+    position: ;
+}
+h1 {
+    font-family: "ROBOTO", Sans-Serif;
+}
+
+.textController, .textController2 {
+    overflow-x: hidden;
+    max-height: 560px;
+    max-width: 100%;
+    border: ;
+    margin-top: -20px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#output, #output2 {
+    margin-bottom: 10px;
+}
+#userIp {
+    color: red;
+}
+#writingBox {
+    margin-top: 0px;
+    display: flex;
+}
+img {
+    max-width: 100%;
+}
+.write, .write2 {
+    color: #;
+    display: none;
+    background-color: #;
+    padding: 5px;
+    width: 100%;
+}
+
+#cmd, #cmd2 {
+    background-color: #1A120B;
+    color: #fff;
+    padding: 5px;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    outline: none;
+    border-radius: ;
+    border-bottom: 1px solid white;
+}
+.blue {
+color: #00BCF9;
+font-weight: bold;
+}
+.pink {
+color: #EE0292;
+font-weight: bold;
+}
+.nema {
+    font-weight: bold;
+}
+
+.blue:hover {
+color: #EE0292;
+}
+.pink:hover {
+color: #00BCF9;
+}
+.blue, .pink {
+transition: 0.5s;
+}
+.makson {
+    display: none;
+}
+
+.makson {
+    text-align: ;
+}
+
+.responseElement {
+    color: #0f0;
+}
+.response-container:after {
+    content: "***";
+    color: red;
+}
+button {
+    background-color: #333;
+    border: none;
+    display: block;
+    color: red;
+    border-radius: 50px;
+    margin-left: 90%;
+}
